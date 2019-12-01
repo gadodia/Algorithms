@@ -1,0 +1,3 @@
+[flake8]
+ignore=[E501]
+exclue=.git,__pycache__,.vscode
