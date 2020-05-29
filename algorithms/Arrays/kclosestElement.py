@@ -3,6 +3,8 @@
 
 Given a list of sorted numbers, and two integers k and x, find k closest numbers to the pivot x.
 
+Time: O(logn) + O(n) = O(n)
+Space: O(n)
 
 '''
 
