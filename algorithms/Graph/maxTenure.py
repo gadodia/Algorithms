@@ -68,11 +68,6 @@ class Solution:
         calcTenure(root)
         return self.max_tenure_manager
 
-
-# n = Node(20)
-# n.children.append(Node(12).children.append(Node(11)).append(Node(2)).append(Node(3))).append(Node(18).children.append(Node(15)).append(Node(8)))
-
-
 n = Node(20, [Node(12, [Node(11), Node(2), Node(3)]), Node(18, [Node(15), Node(8)])])
 print(Solution().maxTenure(n) == 18)
 

@@ -25,13 +25,17 @@ class Node:
   def __repr__(self):
     return f"(Value: {self.value}, Left: {self.left}, Right: {self.right})"
 
+# Wrong
 class Solution:
     def inorder_successor(self, node):
         if not node.left and not node.right:
-            if node.parent and node.parent.left == node:
-                return node.parent.value
+            if node.parent:
+                if node.parent.left == node:
+                    return node.parent.value
+                else:
+                    return node.parent.parent.value if node.parent.parent else None
             else:
-                return None 
+                return None
         if not node.right:
             if node.parent:
                 return node.parent.value
