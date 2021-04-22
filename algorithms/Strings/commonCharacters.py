@@ -17,7 +17,8 @@ class Solution:
         res = []
         chars = collections.defaultdict(int)
         for word in s:
-            for char in word:
+            unique_chars = set(word)
+            for char in unique_chars:
                 chars[char] += 1
         for char, count in chars.items():
             if count >= len(s):
